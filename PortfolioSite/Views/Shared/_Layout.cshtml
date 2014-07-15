@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header><h1>Nathaniel</h1>
+        <img src ="/Content/logo.png" />
+        <nav>
+            <ul>
+                <li>
+                    <a href="@Url.Action("Index","Home")">Home</a>
+                    
+                </li>
+                <li>
+                     <a href="@Url.Action("About","Home")">About</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Work","Home")">Work</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Contact","Home")">Contact</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("MyBio","Home")">My Bio</a>
+                </li>
+               
+            </ul>
+
+        </nav>
+
+    </header>
+    @RenderBody() 
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
